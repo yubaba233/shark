@@ -45,7 +45,7 @@ Vue.use(VueRouter)
       meta: { title: '自动任务',icon: 'el-icon-loading'},
       children: [{
         path: 'task',
-        name: 'task',
+        name: 'autotask',
         meta: { title: '自动任务' },
         component: () => import('@/views/Quartz/autoTask')
       }]
