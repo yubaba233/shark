@@ -31,7 +31,7 @@
     .fish_header {
         padding: 0px;
         box-sizing: border-box;
-        background-color: #666666;
+        background-color: #66b1ff;
         width: 100%;
         height: 60px;
         font-size: 22px;

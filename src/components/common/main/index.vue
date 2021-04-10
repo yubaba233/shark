@@ -7,14 +7,14 @@
                     <router-view></router-view>
                 </keep-alive>
             </transition>
-            <!-- <el-backtop target=".content"></el-backtop>-->
+            <el-backtop target=".content"></el-backtop>
         </div>
 </div>
 </template>
 
 <script>
     import tags from '@/components/common/Tags';
-    import bus from "@/components/common/bus";
+    import bus from '@/components/common/bus';
     export default {
         name: "",
         data() {

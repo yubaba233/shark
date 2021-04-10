@@ -10,17 +10,7 @@
                 </el-aside>
                 <el-main>
                     <appmain/>
-<!--                    <div class="content-box" :class="{'content-collapse':collapse}">-->
-<!--                       <tags/>-->
-<!--                    <div class="content">-->
-<!--                        <transition name="move" mode="out-in">-->
-<!--                            <keep-alive :include="tagsList">-->
-<!--                                <router-view></router-view>-->
-<!--                            </keep-alive>-->
-<!--                        </transition>-->
-<!--                       &lt;!&ndash; <el-backtop target=".content"></el-backtop>&ndash;&gt;-->
-<!--                    </div>-->
-<!--                  </div>-->
+
                 </el-main>
             </el-container>
         </el-container>

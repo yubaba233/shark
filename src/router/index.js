@@ -23,18 +23,23 @@ Vue.use(VueRouter)
       name: 'example',
       component: Home,
       hidden: false,
-      redirect: 'example/Table',
-      meta: { title: '用例',icon: 'el-icon-loading'},
+      redirect: 'example/from',
+      meta: { title: '用例',icon: 'el-icon-s-order'},
       children: [{
-        path: 'Table',
-        name: 'Table',
-        component: () => import('@/views/page/Table'),
+        path: 'from',
+        name: 'from',
+        component: () => import('@/views/example/fromView'),
         meta: { title: '表格', icon: 'el-icon-s-grid' }
       },{
-        path: 'Upload',
-        name: 'Upload',
-        component: () => import('@/views/page/Upload'),
-        meta: { title: '上传附件', icon: 'el-icon-upload' }
+        path: 'scorll',
+        name: 'scorll',
+        component: () => import('@/views/example/scorllbgImag'),
+        meta: { title: '上传附件', icon: 'el-icon-picture-outline' }
+      },{
+        path: 'china',
+        name: 'china',
+        component: () => import('@/views/page/chinamap'),
+        meta: { title: '中国地图', icon: 'el-icon-picture-outline' }
       }]
     },{
       path: '/auto',
@@ -74,7 +79,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requireAuth)){  // 判断该路由是否需要登录权限
     console.log('进入守卫')
-    if (localStorage.token) {  // 判断当前的token是否存在 ； 登录存入的token
+    if (sessionStorage.token) {  // 判断当前的token是否存在 ； 登录存入的token
       next();
     }
     else {

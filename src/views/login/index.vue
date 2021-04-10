@@ -34,7 +34,8 @@
       return {
         form: {
           username: '',
-          password: ''
+          password: '',
+          user: {}
         },
         // 表单验证，需要在 el-form-item 元素中增加 prop 属性
         rules: {
@@ -53,11 +54,19 @@
       onSubmit(formName) {
         // 为表单绑定验证功能
           let _this = this;
-          console.log(_this.form.username)
-          console.log(_this.form.password)
           this.$refs[formName].validate((valid) => {
           if (valid) {
-			  if(_this.form.username==='123' && _this.form.password==='123'){
+              axios.get('/api/user/login',{
+                  params:{
+                      username: _this.form.username,
+                      password: _this.form.password
+                  }
+              })
+                  .then(response=>{
+                      _this.user =response.data
+                  })
+                  .catch(error => console.log(error))
+			  if(_this.user){
 				  // 使用 vue-router 路由到指定页面，该方式称之为编程式导航
                   sessionStorage.setItem("token","true");
                   this.$store.commit('setToken',true);

@@ -1,7 +1,7 @@
 module.exports = {
 	publicPath: '/',
 	outputDir:'dist',
-	assetsDir:'asserts',
+	assetsDir:'assets',
 	devServer: {
 		port: 8888,     // 端口
 		proxy: {
@@ -21,12 +21,12 @@ module.exports = {
 	// 取消 eslint 验证
 	lintOnSave: false,
 
-	pluginOptions: {
-	  i18n: {
-		locale: 'en',
-		fallbackLocale: 'en',
-		localeDir: 'locales',
-		enableInSFC: false
-	  }
-	}
+	// pluginOptions: {
+	//   i18n: {
+	// 	locale: 'en',
+	// 	fallbackLocale: 'en',
+	// 	localeDir: 'locales',
+	// 	enableInSFC: false
+	//   }
+	// }
   };

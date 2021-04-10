@@ -119,7 +119,6 @@
         overflow: hidden;
         background: #fff;
         padding-right: 120px;
-        box-shadow: 0 5px 10px #ddd;
     }
 
     .tags ul {
@@ -152,7 +151,7 @@
     }
 
     .tags-li.active {
-        background: #2d8cf0;
+        background: #66b1ff;
         color: #fff;
     }
 
