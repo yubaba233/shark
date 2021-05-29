@@ -23,7 +23,6 @@
         <div class="box_1">
             <el-card class="card_2_2">
                 <div >
-                    <mapGetter/>
                 </div>
 
             </el-card>
@@ -41,14 +40,13 @@
 </template>
 
 <script>
-    import mapGetter from './chinamap';
     export default {
         name: "",
         data(){
             return{}
         },
         components:{
-            mapGetter
+
         }
     }
 </script>

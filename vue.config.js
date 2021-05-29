@@ -17,7 +17,6 @@ module.exports = {
 			  }
 			}
 	},
-
 	// 取消 eslint 验证
 	lintOnSave: false,
 
